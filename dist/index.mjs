@@ -1238,10 +1238,7 @@ import {
   addWeeks,
   startOfMonth as startOfMonth2,
   endOfMonth as endOfMonth2,
-  addMonths as addMonths2,
-  startOfYear as startOfYear2,
-  endOfYear as endOfYear2,
-  addYears as addYears2
+  addMonths as addMonths2
 } from "date-fns";
 var getDefaultRanges = (date, locale) => [
   {
@@ -1280,14 +1277,9 @@ var getDefaultRanges = (date, locale) => [
     endDate: endOfMonth2(addMonths2(date, -1))
   },
   {
-    label: "This Year",
-    startDate: startOfYear2(date),
-    endDate: endOfYear2(date)
-  },
-  {
-    label: "Last Year",
-    startDate: startOfYear2(addYears2(date, -1)),
-    endDate: endOfYear2(addYears2(date, -1))
+    label: "Last 30 Days",
+    startDate: addDays2(date, -30),
+    endDate: date
   }
 ];
 

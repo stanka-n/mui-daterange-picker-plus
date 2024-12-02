@@ -1221,14 +1221,9 @@ var getDefaultRanges = (date, locale) => [
     endDate: (0, import_date_fns10.endOfMonth)((0, import_date_fns10.addMonths)(date, -1))
   },
   {
-    label: "This Year",
-    startDate: (0, import_date_fns10.startOfYear)(date),
-    endDate: (0, import_date_fns10.endOfYear)(date)
-  },
-  {
-    label: "Last Year",
-    startDate: (0, import_date_fns10.startOfYear)((0, import_date_fns10.addYears)(date, -1)),
-    endDate: (0, import_date_fns10.endOfYear)((0, import_date_fns10.addYears)(date, -1))
+    label: "Last 30 Days",
+    startDate: (0, import_date_fns10.addDays)(date, -30),
+    endDate: date
   }
 ];
 

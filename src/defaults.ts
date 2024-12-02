@@ -59,13 +59,8 @@ export const getDefaultRanges = (
     endDate: endOfMonth(addMonths(date, -1)),
   },
   {
-    label: "This Year",
-    startDate: startOfYear(date),
-    endDate: endOfYear(date),
-  },
-  {
-    label: "Last Year",
-    startDate: startOfYear(addYears(date, -1)),
-    endDate: endOfYear(addYears(date, -1)),
+    label: "Last 30 Days",
+    startDate: addDays(date, -30),
+    endDate: date,
   },
 ];
