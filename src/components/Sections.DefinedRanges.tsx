@@ -88,7 +88,6 @@ export const DefinedRanges: React.FunctionComponent<DefinedRangesProps> = ({
                             color: alpha(theme.palette.grey[600], 1),
                           },
                       {
-                        fontFamily: "Roboto",
                         fontSize: 13,
                         fontWeight: 400,
                       },
